@@ -94,6 +94,59 @@ body {
   animation: moveInLeft 1s ease-in-out;
 }
 
+.heading-secondary {
+  font-size: 2.188rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s ease;
+  letter-spacing: 2px;
+}
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.2);
+  letter-spacing: 4px;
+  text-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+.heading-tertiary {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.paragraph {
+  font-size: 1rem;
+}
+.paragraph:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-l {
+  margin-bottom: 5rem;
+}
+
+.u-margin-bottom-m {
+  margin-bottom: 2.5rem;
+}
+
+.u-margin-bottom-s {
+  margin-bottom: 1rem;
+}
+
+.section--about {
+  background-color: #f7f7f7;
+  padding: 16rem 0;
+  margin-top: -20vh;
+}
+
 .btn:is(:link, :visited) {
   text-transform: uppercase;
   transition: all 0.2s ease;
@@ -142,7 +195,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0% 0%, 0% 100%, 100% 80%, 100% 0%);
+  clip-path: polygon(0% 0%, 0% 100%, 100% 75vh, 100% 0%);
   position: relative;
 }
 .header__logo-box {
@@ -163,9 +216,7 @@ body {
 
 .row {
   max-width: 71.25rem;
-  background-color: #ede;
   margin: 0 auto;
-  color: #fff;
 }
 .row:not(:last-child) {
   margin-bottom: 5rem;
@@ -176,7 +227,6 @@ body {
   clear: both;
 }
 .row [class^=col-] {
-  background-color: aqua;
   padding: 1rem 2rem;
   float: left;
 }
