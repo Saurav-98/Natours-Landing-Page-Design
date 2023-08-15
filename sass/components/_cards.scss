@@ -64,6 +64,8 @@
     background-size: cover;
     -webkit-background-blend-mode: color;
     background-blend-mode: color;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     clip-path: polygon(0% 0%, 0% 100%, 100% 80%, 100% 0%);
 
