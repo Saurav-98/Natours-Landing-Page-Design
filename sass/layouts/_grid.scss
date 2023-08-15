@@ -9,7 +9,6 @@
 
   @include clearfix;
   [class^="col-"] {
-    padding: 1rem 2rem;
     float: left;
     &:not(:last-child) {
       margin-right: $gap-horizontal;

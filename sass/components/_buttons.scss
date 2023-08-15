@@ -25,6 +25,9 @@
     &::after {
       background-color: $color-white;
     }
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    // position: unset !important;
   }
   &::after {
     content: "";
