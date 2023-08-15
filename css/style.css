@@ -145,6 +145,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.u-margin-top-xl {
+  margin-top: 8rem;
+}
+
 .section--about {
   background-color: #f7f7f7;
   padding: 16rem 0;
@@ -191,11 +195,17 @@ body {
   background-color: #fff;
   color: #777;
   padding: 0.938rem 2.5rem;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 .btn--white::after {
   background-color: #fff;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+  padding: 0.938rem 2.5rem;
+}
+.btn--green::after {
+  background-color: #55c57a;
 }
 .btn::after {
   content: "";
@@ -332,6 +342,8 @@ body {
   background-size: cover;
   -webkit-background-blend-mode: color;
   background-blend-mode: color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   clip-path: polygon(0% 0%, 0% 100%, 100% 80%, 100% 0%);
 }
 .card__image--1 {

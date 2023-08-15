@@ -25,9 +25,14 @@
     &::after {
       background-color: $color-white;
     }
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    // position: unset !important;
+  }
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 0.938rem 2.5rem;
+    &::after {
+      background-color: $color-primary;
+    }
   }
   &::after {
     content: "";
