@@ -533,7 +533,7 @@ body {
   border-bottom: 3px solid #ff7730;
 }
 .form__input::-webkit-input-placeholder {
-  color: #333;
+  color: #303030;
 }
 .form__label {
   font-size: 0.75rem;
@@ -611,6 +611,47 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 6.25rem 0;
+  color: #f7f7f7;
+  font-size: 1.1rem;
+}
+.footer__logo-box {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.footer__logo {
+  width: 9.375rem;
+  height: auto;
+}
+.footer__navigation {
+  display: inline-block;
+  border-top: 2px solid #ddd;
+  padding-top: 2rem;
+}
+.footer__list li {
+  display: inline-block;
+}
+.footer__list li:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__link {
+  color: #ddd;
+  transition: all 0.3s;
+}
+.footer__link:is(:hover, :focus) {
+  color: #55c57a;
+  transform: scale(1.2) rotate(4deg);
+  background-color: #303030;
+}
+.footer__copyright {
+  border-top: 2px solid #ddd;
+  padding-top: 2rem;
+  width: 80%;
+  float: right;
 }
 
 .row {
