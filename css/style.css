@@ -589,6 +589,123 @@ body {
   display: none;
 }
 
+.nav__toggle {
+  display: none;
+}
+.nav__button {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-image: radial-gradient(#ffb900, #ff7730);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  z-index: 200;
+  cursor: pointer;
+}
+.nav__background {
+  width: 4rem;
+  height: 4rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  border-radius: 50%;
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  z-index: 100;
+  transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.nav__menu {
+  z-index: 150;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  inset: 0;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 300;
+  transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  opacity: 0;
+  width: 0;
+}
+.nav__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav__item {
+  margin: 0.75rem;
+}
+.nav__link:is(:link, :visited) {
+  color: inherit;
+  padding: 0.75rem 2rem;
+  background-image: linear-gradient(128deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 230%;
+  transition: all 0.6s ease;
+  text-transform: uppercase;
+}
+.nav__link:is(:hover, :focus) {
+  background-position: right;
+  color: #55c57a;
+  transform: translateX(2rem);
+}
+.nav__link span {
+  margin-right: 1rem;
+}
+.nav__toggle:checked ~ .nav__background {
+  transform: scale(80);
+}
+.nav__toggle:checked ~ .nav__menu {
+  width: 100%;
+  opacity: 1;
+}
+.nav__icon, .nav__icon::after, .nav__icon::before {
+  display: inline-block;
+  width: 2.6rem;
+  height: 2.6px;
+  background-color: #5643fa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
+}
+.nav__icon::after, .nav__icon::before {
+  content: "";
+}
+.nav__icon::after {
+  top: 0.7rem;
+}
+.nav__icon::before {
+  top: -0.6rem;
+}
+.nav__button:hover .nav__icon {
+  width: 2.2rem;
+  height: 3.5px;
+}
+.nav__button:hover .nav__icon::after {
+  top: 0.85rem;
+  height: 3.5px;
+}
+.nav__button:hover .nav__icon::before {
+  top: -0.75rem;
+  height: 3.5px;
+}
+.nav__toggle:checked + .nav__button .nav__icon {
+  background-color: transparent;
+}
+.nav__toggle:checked + .nav__button .nav__icon::after {
+  transform: rotate(-135deg);
+  top: 0;
+  left: 0;
+}
+.nav__toggle:checked + .nav__button .nav__icon::before {
+  transform: rotate(135deg);
+  top: 0;
+  left: 0;
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
