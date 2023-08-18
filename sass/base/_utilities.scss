@@ -6,9 +6,15 @@
 }
 .u-margin-bottom-l {
   margin-bottom: 6rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 2rem !important;
+  }
 }
 .u-margin-bottom-m {
   margin-bottom: 2.5rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 0.5rem !important;
+  }
 }
 .u-margin-bottom-n {
   margin-bottom: 1rem !important;
@@ -19,10 +25,16 @@
 
 .u-margin-top-xl {
   margin-top: 8rem !important;
+  @include respond(tab-port) {
+    margin-top: 2rem !important;
+  }
 }
 .u-margin-top-n {
   margin-top: 1rem !important;
 }
 .u-margin-top-m {
   margin-top: 2rem !important;
+  @include respond(tab-port) {
+    margin-top: 0.5rem !important;
+  }
 }

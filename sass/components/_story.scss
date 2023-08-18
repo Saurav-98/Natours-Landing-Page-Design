@@ -9,11 +9,23 @@
   margin: 2rem auto;
 
   transform: skewX(-10deg);
+  @include respond(tab-port) {
+    padding: 2rem;
+    padding-left: 3rem;
+  }
 
   & > * {
     transform: skewX(10deg);
   }
 
+  @include respond(phone) {
+    padding: 1rem;
+    padding-left: 2.5rem;
+    transform: skewX(0);
+    & > * {
+      transform: skewX(0);
+    }
+  }
   &__shape {
     width: 9.375rem;
     height: 9.375rem;
@@ -23,6 +35,12 @@
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translate(-1.875rem, -0.25rem) skewX(10deg);
+    @include respond(phone) {
+      transform: translate(-10%, 0%) skewX(0);
+      float: none;
+      margin-bottom: 2rem;
+      margin-inline: auto;
+    }
   }
   &__shape--image {
     height: 100%;

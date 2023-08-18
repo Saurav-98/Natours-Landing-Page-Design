@@ -14,12 +14,16 @@ ul {
   list-style: none;
 }
 html {
-  font-size: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   padding: 1.875rem;
   box-sizing: border-box;
-  // position: relative;
+  width: 100%;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

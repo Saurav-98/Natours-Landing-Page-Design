@@ -3,19 +3,59 @@
   display: grid;
   margin: 0 auto;
   column-gap: $gap-horizontal;
+  row-gap: $gap-vertical;
+  padding: 2rem;
+
+  @include respond(tab-land) {
+    column-gap: $gap-horizontal-sm;
+  }
+  @include respond(tab-port) {
+    max-width: $grid-width-sm;
+  }
+  @include respond(phone) {
+    padding: 1rem;
+    row-gap: $gap-vertical-sm;
+  }
 
   &__about {
     grid-template-columns: repeat(2, 1fr);
+    @include respond(tab-port) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__features {
     grid-template-columns: repeat(4, 1fr);
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   &__tours {
     grid-template-columns: repeat(3, 1fr);
+    @include respond(tab-port) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+    }
   }
 
   &__footer {
     grid-template-columns: repeat(2, 1fr);
+    @include respond(tab-port) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+    }
+  }
+}
+
+.footer {
+  &__navigation,
+  &__copyright {
+    @include respond(tab-port) {
+      justify-self: center;
+      text-align: center;
+    }
   }
 }
