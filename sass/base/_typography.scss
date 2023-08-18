@@ -2,7 +2,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: $step-0;
   color: $color-grey-dark;
 }
 
@@ -17,11 +17,14 @@ body {
     display: block;
   }
   &--title {
-    font-size: 4.75rem;
+    font-size: $step-5;
     font-weight: 400;
-    letter-spacing: 2.188rem;
+    letter-spacing: 2.4rem;
     animation: moveInRight 1s ease-in-out;
 
+    @include respond(tab-land) {
+      letter-spacing: 2rem;
+    }
     /* 
   animation-delay : 3s;
   animation-iteration-count: 4;
@@ -30,15 +33,18 @@ body {
   }
 
   &--subtitle {
-    font-size: 1.25rem;
+    font-size: $step-1;
     font-weight: 700;
-    letter-spacing: 19.4px;
+    letter-spacing: 1.2rem;
     animation: moveInLeft 1s ease-in-out;
+    @include respond(tab-land) {
+      letter-spacing: 1rem;
+    }
   }
 }
 
 .heading-secondary {
-  font-size: 2.188rem;
+  font-size: $step-3;
   text-transform: uppercase;
   font-weight: 700;
 
@@ -63,11 +69,46 @@ body {
 .heading-tertiary {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: $step-0;
 }
 .paragraph {
-  font-size: 1rem;
+  font-size: $step-0;
   &:not(:last-child) {
     margin-bottom: 2rem;
+  }
+}
+
+.card {
+  &__heading {
+    font-size: $step-2;
+  }
+  &__price-only {
+    font-size: $step-0;
+  }
+  &__price-value {
+    font-size: $step-5;
+  }
+}
+
+.story {
+  font-size: $step--1;
+
+  &__caption {
+    font-size: inherit;
+  }
+}
+
+.form {
+  font-size: $step--1;
+  &__label {
+    font-size: $step--2;
+  }
+}
+
+.footer {
+  font-size: $step-0;
+
+  &__copyright {
+    font-size: $step--1;
   }
 }

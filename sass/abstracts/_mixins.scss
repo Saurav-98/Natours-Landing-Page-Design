@@ -5,3 +5,62 @@
     clear: both;
   }
 }
+
+// Media Query Manager
+
+/*
+0 - 600px: Mobile Phone
+600px - 900px: Portrait Tablets
+900px - 1200px: Landscape Tablets
+1200px - 1800px: Desktop Design - CUrrent Design
+1800px+   Big Desktop Design
+
+*/
+
+// @mixin response-mobile {
+//   @media (max-width: 600px) {
+//     @content;
+//   }
+// }
+
+/*
+BREAKPOINT ARGUMENT OPTIONS
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+// Responsive Design Order Approach
+
+/*
+- Base + Typography
+- General Layout
+- Grid
+- Page Layout
+- Components
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == big-desktop {
+    @media (min-width: 120em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 80em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 60em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: 40em) {
+      @content;
+    }
+  }
+}

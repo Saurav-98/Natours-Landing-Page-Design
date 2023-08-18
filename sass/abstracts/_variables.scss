@@ -18,6 +18,20 @@ $color-tertiary-dark: #5643fa;
 
 // GRID
 
-$grid-width: 71.25rem;
+$grid-width: 72rem;
 $gap-vertical: 5rem;
 $gap-horizontal: 3.75rem;
+$gap-horizontal-sm: 1.5rem;
+
+// Adding Fluid Typography
+
+$step--3: clamp(0.51rem, calc(0.5rem + 0.07vw), 0.56rem);
+$step--2: clamp(0.64rem, calc(0.61rem + 0.16vw), 0.75rem);
+$step--1: clamp(0.72rem, calc(0.68rem + 0.22vw), 0.87rem);
+$step-0: clamp(0.8rem, calc(0.74rem + 0.29vw), 1rem);
+$step-1: clamp(1rem, calc(0.9rem + 0.48vw), 1.33rem);
+$step-2: clamp(1.25rem, calc(1.1rem + 0.75vw), 1.78rem);
+$step-3: clamp(1.56rem, calc(1.33rem + 1.15vw), 2.37rem);
+$step-4: clamp(1.95rem, calc(1.61rem + 1.72vw), 3.16rem);
+$step-5: clamp(2.44rem, calc(1.94rem + 2.53vw), 4.21rem);
+$step-6: clamp(3.05rem, calc(2.32rem + 3.65vw), 5.61rem);

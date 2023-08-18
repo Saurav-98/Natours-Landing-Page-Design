@@ -3,10 +3,10 @@
   background-color: rgba($color-white, 0.6);
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   border-radius: 3px;
-  font-size: 0.938rem;
+  // font-size: 0.938rem;
   padding-left: 5.625rem;
   width: 75%;
-  margin: 5rem auto;
+  margin: 2rem auto;
 
   transform: skewX(-10deg);
 
@@ -30,7 +30,7 @@
     transition: all 0.5s ease;
   }
   &__caption {
-    font-size: 0.938rem;
+    // font-size: 0.938rem;
     font-weight: bold;
     text-transform: uppercase;
     width: max-content;
