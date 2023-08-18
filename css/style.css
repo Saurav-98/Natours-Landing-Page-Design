@@ -888,7 +888,7 @@ body {
 @media (max-width: 40em) {
   .nav__button {
     top: 2rem;
-    right: 5rem;
+    right: 2rem;
     width: 3rem;
     height: 3rem;
   }
@@ -915,7 +915,7 @@ body {
 @media (max-width: 40em) {
   .nav__background {
     top: 2.5rem;
-    right: 5.5rem;
+    right: 2.5rem;
     width: 1.5rem;
     height: 1.5rem;
   }
@@ -1033,6 +1033,16 @@ body {
   clip-path: polygon(0% 0%, 0% 100%, 100% 75vh, 100% 0%);
   position: relative;
 }
+@media (max-width: 60em) {
+  .header {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 85vh, 100% 0%);
+  }
+}
+@media (max-width: 40em) {
+  .header {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 90vh, 100% 0%);
+  }
+}
 .header__logo-box {
   position: absolute;
   top: 2.5rem;
@@ -1130,7 +1140,7 @@ body {
 }
 .popup__content {
   width: 75%;
-  height: max-content;
+  height: auto;
   background-color: #fff;
   position: absolute;
   top: 50%;
@@ -1146,9 +1156,20 @@ body {
 .popup__left {
   width: 33.3333%;
 }
+@media (max-width: 80em) {
+  .popup__left {
+    display: none;
+  }
+}
 .popup__right {
   width: 66.666667%;
-  padding: 3rem 4rem;
+  padding: 1rem;
+}
+@media (max-width: 80em) {
+  .popup__right {
+    padding: 2rem;
+    width: 100%;
+  }
 }
 .popup__img {
   width: 100%;
@@ -1159,6 +1180,12 @@ body {
   column-gap: 3rem;
   column-rule: 2px solid #55c57a;
   hyphens: auto;
+}
+@media (max-width: 80em) {
+  .popup__text {
+    column-count: 1;
+    column-rule: none;
+  }
 }
 .popup__close:is(:link, :visited) {
   position: absolute;
