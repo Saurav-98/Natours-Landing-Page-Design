@@ -15,12 +15,23 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url("../img/nat-4.jpg");
+    url("../img/nat-4-small.webp");
   background-size: cover;
 
   @include respond(tab-port) {
     padding: 4rem 0;
   }
+
+  @media (min-resolution: 192dpi) and (min-width: 40em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.8),
+        rgba($color-secondary-dark, 0.8)
+      ),
+      url("../img/nat-4.jpg");
+  }
+
+  // @media (min-resolution: 192dpi) and
 
   // clip-path: polygon(0% 20%, 0% 100%, 100% 80%, 100% 0%);
   // margin-top: -12rem;

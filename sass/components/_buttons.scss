@@ -60,10 +60,12 @@
   &--text {
     &:is(:link, :visited) {
       color: $color-primary;
+
       border-bottom: 2px solid currentColor;
       padding: 3px;
       font-size: 1rem;
       transition: all 0.2s ease;
+      cursor: pointer;
     }
 
     &:hover {
