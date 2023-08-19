@@ -129,21 +129,36 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
+              <!-- Performing Density and Resolution switching together -->
+
               <img
+                srcset="./img/nat-1.jpg 300w, ./img/nat-1-large.jpg 1000w"
+                sizes="(max-width:960px) 21vw, (max-width:640px) 32vw , 300px"
                 src="./img/nat-1-large.jpg"
-                alt="nature one"
+                alt="nature photo one"
                 class="composition__photo composition__photo--p1"
               />
+              <!-- Responsive Image for picture 1 ends -->
+              <!-- Performing Density and Resolution switching together -->
+
               <img
+                srcset="./img/nat-2.jpg 300w, ./img/nat-2-large.jpg 1000w"
+                sizes="(max-width:960px) 21vw, (max-width:640px) 32vw , 300px"
                 src="./img/nat-2-large.jpg"
-                alt="nature two"
+                alt="nature photo two"
                 class="composition__photo composition__photo--p2"
               />
+              <!-- Responsive Image for picture 2 ends -->
+              <!-- Performing Density and Resolution switching together -->
+
               <img
+                srcset="./img/nat-3.jpg 300w, ./img/nat-3-large.jpg 1000w"
+                sizes="(max-width:960px) 21vw, (max-width:640px) 32vw , 300px"
                 src="./img/nat-3-large.jpg"
-                alt="nature 3"
+                alt="nature photo three"
                 class="composition__photo composition__photo--p3"
               />
+              <!-- Responsive Image for picture 3 ends -->
             </div>
           </div>
         </div>
@@ -423,11 +438,23 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img
-          src="../img/logo-green-2x.png"
-          alt="Natyours green logo"
-          class="footer__logo"
-        />
+        <!-- Performing Density Switching using srcset -->
+        <!-- Performing Art Direction using picture element -->
+
+        <picture class="footer__logo">
+          <source
+            srcset="
+              ./img/logo-green-small-1x.png 1x,
+              ./img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 40em)"
+          />
+          <img
+            srcset="./img/logo-green-1x.png 1x, ../img/logo-green-2x.png 2x"
+            alt="Natyours green logo"
+            src="./img/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="grid grid__footer">
         <nav class="footer__navigation">
